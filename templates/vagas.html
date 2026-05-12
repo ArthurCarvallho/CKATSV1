@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Minhas Vagas | CK ATS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="navbar-layout">
+    <div class="header">
+        <div class="logo"><span>CK ATS</span></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/home">Início</a></li>
+                <li><a href="/vagas" class="active">Vagas</a></li>
+                <li><a href="/candidatos_ranqueados">Candidatos</a></li>
+            </ul>
+        </nav>
+        <div class="user-info"><span id="user-nome">Olá, Arthur Carvalho!</span></div>
+    </div>
+
+    <div class="main-content">
+        <div class="page-header">
+            <h2>Minhas Vagas Ativas</h2>
+            <button class="btn btn-primary" id="btnCriarNovaVaga"><i class="fas fa-plus"></i> Criar Nova Vaga</button>
+        </div>
+        <div class="job-list" id="jobList">
+            </div>
+    </div>
+
+    <div class="modal" id="modalNovaVaga">
+        <div class="modal-content">
+            <span class="close-button" id="closeModalNovaVaga">&times;</span>
+            <h3>Criar Nova Vaga</h3>
+            <form id="formNovaVaga" novalidate>
+                <div class="input-group">
+                    <label for="vagaNome">Nome da Vaga</label>
+                    <input type="text" id="vagaNome" required placeholder="Ex: Analista de Dados Pleno">
+                </div>
+                <div class="input-group">
+                    <label for="vagaRequisitos">Descrição e Requisitos</label>
+                    <textarea id="vagaRequisitos" rows="5" required placeholder="Cole aqui a descrição completa da vaga..."></textarea>
+                </div>
+                
+                <div class="habilidades-section">
+                    <label>Habilidades-Chave</label>
+                    <button type="button" class="btn btn-secondary" id="btnSugerirHabilidades">
+                        <i class="fas fa-magic"></i> Sugerir com IA
+                    </button>
+                    <div id="tagsContainer" class="tags-wrapper">
+                        </div>
+                    <div class="manual-skill-add">
+                        <input type="text" id="manualSkillInput" placeholder="Ou digite uma habilidade e tecle Enter...">
+                    </div>
+                </div>
+
+                <div class="form-actions-bottom">
+                    <button type="button" class="btn btn-secondary" id="btnCancelModal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar Vaga</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
