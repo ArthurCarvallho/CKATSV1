@@ -383,6 +383,10 @@ O projeto evolui continuamente rumo a uma plataforma SaaS robusta e pronta para 
 
 ---
 
-## 📄 Licença
 
-Este projeto possui finalidade educacional e de portfólio.
+## 📄 Licença e Direitos Autorais
+
+**© 2026 Arthur Paulo de Carvalho. Todos os direitos reservados.**
+
+Este código-fonte é de propriedade exclusiva do autor. O repositório encontra-se público estritamente para fins de demonstração técnica e avaliação de portfólio. Não é permitida a cópia, modificação, distribuição ou uso comercial deste software, total ou parcialmente, sem a autorização prévia e expressa do criador.
+
