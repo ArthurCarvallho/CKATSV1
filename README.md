@@ -1,117 +1,388 @@
-# CK ATS - Triagem Inteligente de Currículos com IA
+# 🚀 CK ATS — Triagem Inteligente de Currículos com IA
+
+<div align="center">
+
+### Plataforma ATS Inteligente com IA para Automação de Recrutamento
 
 **Autor:** Arthur Paulo de Carvalho
-**Projeto:** Trabalho de Conclusão de Curso (TCC)
-**Status:** Protótipo Funcional Concluído
+**Versão:** SaaS Portfólio V1
+**Status:** ✅ Protótipo Funcional Concluído
+
+<br>
 
 ![Demonstração do Ranking de Candidatos](static/img/image.png)
 
----
-
-## 1. Sobre o Projeto
-
-O CK ATS é uma plataforma de recrutamento inteligente (ATS - Applicant Tracking System) desenvolvida como um protótipo funcional. O projeto nasceu para solucionar um desafio central no setor de Recursos Humanos: a ineficiência, o alto custo e a subjetividade do processo de triagem manual de currículos.
-
-A solução utiliza um Modelo de Linguagem Amplo (LLM), especificamente a API do Google Gemini, para automatizar a extração de dados de currículos, calcular um "Índice de Adequação" ponderado para cada candidato em relação a uma vaga específica, e apresentar os talentos mais promissores de forma visual e intuitiva para o recrutador. O objetivo não é substituir o profissional de RH, mas sim empoderá-lo com uma ferramenta estratégica, transformando horas de trabalho operacional em minutos de análise focada nos melhores candidatos.
+</div>
 
 ---
 
-## 2. Funcionalidades Principais
+# 📌 Sobre o Projeto
 
-O protótipo atual é 100% funcional e inclui as seguintes funcionalidades:
+O **CK ATS** é uma plataforma de recrutamento inteligente (**ATS — Applicant Tracking System**) desenvolvida para automatizar e otimizar processos de triagem de currículos utilizando Inteligência Artificial.
 
-* **Gestão de Vagas:**
-    * Criação, listagem e exclusão de vagas.
-    * **Sugestão de Habilidades com IA:** O sistema analisa a descrição da vaga e sugere as competências técnicas e comportamentais mais relevantes.
-    * Adição manual de habilidades.
+O projeto nasceu para solucionar um dos maiores desafios do setor de RH:
 
-* **Processamento de Candidatos:**
-    * **Upload em Massa:** Permite o envio de múltiplos currículos nos formatos `.pdf` e `.docx`.
-    * **Extração de Dados com IA:** Extrai e estrutura automaticamente informações como dados de contato, experiência profissional, formação acadêmica, habilidades e idiomas.
-    * **Prevenção de Duplicatas:** Utiliza um hash do conteúdo do arquivo para evitar o processamento de currículos duplicados.
+* Alto volume de currículos
+* Processos manuais demorados
+* Baixa eficiência operacional
+* Subjetividade na seleção inicial
 
-* **Ranking Inteligente:**
-    * **Índice de Adequação:** Calcula uma pontuação ponderada (habilidades, experiência, formação) para ranquear os candidatos mais compatíveis com uma vaga selecionada.
-    * **Níveis de Compatibilidade:** Classifica os candidatos em níveis visuais ("Excelente", "Promissor", "Requer Análise") para facilitar a tomada de decisão.
-    * **Visualização em Pódio:** Destaca o "Top 3" candidatos com um design inspirado em um pódio de corrida, tornando a identificação dos melhores talentos imediata.
+A solução utiliza um **LLM (Large Language Model)** através da API do **Google Gemini** para:
 
-* **Dashboard e Análises:**
-    * Exibe KPIs como o número total de candidatos e a pontuação média da base.
-    * Apresenta gráficos sobre as habilidades mais comuns e a distribuição das pontuações dos candidatos.
+✅ Extrair informações automaticamente dos currículos
+✅ Estruturar dados dos candidatos
+✅ Calcular um índice de adequação para cada vaga
+✅ Ranquear os candidatos mais compatíveis
+✅ Facilitar decisões estratégicas do RH
 
-* **Ações de RH:**
-    * Permite **reprovar** ou **excluir** candidatos diretamente da lista.
-    * Oferece um atalho para **agendar entrevistas**, direcionando para uma página de agendamento.
-    * **Exportação para CSV:** Gera um arquivo `.csv` com os dados dos candidatos para análise externa.
+O objetivo do sistema **não é substituir recrutadores**, mas sim transformar horas de triagem operacional em minutos de análise inteligente focada nos melhores talentos.
 
 ---
 
-## 3. Arquitetura e Tecnologias Utilizadas
+# ✨ Funcionalidades Principais
 
-A aplicação foi construída utilizando uma arquitetura web moderna e flexível, composta pelas seguintes tecnologias:
+## 📂 Gestão de Vagas
 
-* **Backend:** **Python 3** com o microframework **Flask**.
-* **Inteligência Artificial:** **API do Google Gemini (LLM)** para processamento de linguagem natural.
-* **Banco de Dados:** **SQLite 3** para armazenamento de dados de vagas e candidatos.
-* **Frontend:** **HTML5**, **CSS3** e **JavaScript** (Vanilla JS) para a interface do usuário.
-* **Bibliotecas Python Notáveis:**
-    * `PyPDF2` e `python-docx` para extração de texto dos arquivos.
-    * `Requests` para comunicação com a API do Gemini.
-* **Bibliotecas JavaScript Notáveis:**
-    * `Chart.js` para a renderização dos gráficos na dashboard.
+* Criação de vagas
+* Listagem de vagas
+* Exclusão de vagas
+* Cadastro manual de habilidades
+* Sugestão automática de habilidades com IA
 
----
+### 🤖 Sugestão Inteligente de Skills
 
-## 4. Como Executar o Projeto Localmente
+O sistema analisa a descrição da vaga e sugere automaticamente:
 
-Siga os passos abaixo para configurar e executar o projeto no seu ambiente local.
-
-### Pré-requisitos
-* Python 3.8 ou superior
-* Pip (gerenciador de pacotes do Python)
-
-### Instalação
-1.  **Clone o repositório:**
-    ```bash
-    git clone https://github.com/ArthurCarvallho/APB-VISION-Prototype-.git
-    cd [APB-VISION-Prototype-]
-    ```
-
-2.  **Crie e ative um ambiente virtual (recomendado):**
-    ```bash
-    python -m venv venv
-    # No Windows
-    venv\Scripts\activate
-    # No macOS/Linux
-    source venv/bin/activate
-    ```
-
-3.  **Instale as dependências:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(Nota: Você precisará criar um arquivo `requirements.txt`. Para isso, no seu terminal com o ambiente virtual ativado, execute: `pip freeze > requirements.txt`)*
-
-4.  **Configure a Chave da API:**
-    * No arquivo `APP.py`, localize a linha:
-        `GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', 'SUA_CHAVE_API_AQUI')`
-    * Substitua `'SUA_CHAVE_API_AQUI'` pela sua chave real da API do Google Gemini.
-
-### Execução
-1.  **Inicie o servidor Flask:**
-    ```bash
-    python APP.py
-    ```
-
-2.  **Acesse a aplicação:**
-    * Abra o seu navegador e acesse `http://127.0.0.1:5000`
+* Hard Skills
+* Soft Skills
+* Tecnologias relevantes
+* Competências comportamentais
 
 ---
 
-## 5. Próximos Passos (Visão Futura)
+## 👨‍💼 Processamento Inteligente de Currículos
 
-Este protótipo serve como uma base sólida. As futuras evoluções para transformar a CK ATS em um produto completo incluem:
+### 📤 Upload em Massa
 
-* **Fase 1 - Consolidação como ATS:** Implementação de um pipeline Kanban para gestão do funil, automação de e-mails e integração com agendas.
-* **Fase 2 - Automação Inteligente:** Integração de um chatbot para pré-triagem e agendamento automático.
-* **Fase 3 - Análise Preditiva:** Incorporação de entrevistas em vídeo assíncronas com análise de soft skills pela IA.
+Envio simultâneo de múltiplos currículos nos formatos:
+
+* `.pdf`
+* `.docx`
+
+### 🧠 Extração de Dados com IA
+
+A IA realiza parsing automático e estruturado de:
+
+* Nome
+* Contato
+* Formação acadêmica
+* Experiência profissional
+* Habilidades
+* Idiomas
+* Certificações
+
+### 🔒 Prevenção de Duplicatas
+
+O sistema utiliza hash do arquivo para impedir processamento duplicado de currículos.
+
+---
+
+# 🏆 Ranking Inteligente de Candidatos
+
+## 📊 Índice de Adequação
+
+O CK ATS calcula automaticamente uma pontuação baseada em:
+
+* Compatibilidade de habilidades
+* Experiência profissional
+* Formação acadêmica
+* Requisitos da vaga
+
+---
+
+## 🎯 Níveis de Compatibilidade
+
+Os candidatos são classificados visualmente em:
+
+| Nível             | Descrição                |
+| ----------------- | ------------------------ |
+| 🟢 Excelente      | Alta compatibilidade     |
+| 🟡 Promissor      | Compatibilidade moderada |
+| 🔴 Requer Análise | Baixa compatibilidade    |
+
+---
+
+## 🥇 Visualização em Pódio
+
+O sistema destaca os **Top 3 candidatos** utilizando uma interface inspirada em pódios de corrida, permitindo identificação imediata dos melhores talentos.
+
+---
+
+# 📈 Dashboard & Analytics
+
+O sistema apresenta métricas estratégicas como:
+
+* Total de candidatos cadastrados
+* Média de compatibilidade
+* Distribuição de pontuações
+* Habilidades mais frequentes
+* Insights da base de talentos
+
+---
+
+# ⚙️ Ações de RH
+
+O recrutador pode:
+
+✅ Aprovar candidatos
+✅ Reprovar candidatos
+✅ Excluir candidatos
+✅ Agendar entrevistas
+✅ Exportar dados para CSV
+
+---
+
+# 🏗️ Arquitetura e Tecnologias
+
+## 🔙 Backend
+
+* Python 3
+* Flask
+
+## 🤖 Inteligência Artificial
+
+* Google Gemini API (`google-genai`)
+
+## 🗄️ Banco de Dados
+
+* SQLite 3 *(V1)*
+* MySQL *(em implementação na V2)*
+
+### Segurança aplicada:
+
+* Queries parametrizadas
+* Proteção contra SQL Injection
+
+---
+
+## 🎨 Frontend
+
+* HTML5
+* CSS3
+* JavaScript Vanilla
+
+---
+
+## 🔐 Segurança
+
+* `python-dotenv`
+* Variáveis de ambiente
+* `SECRET_KEY` do Flask
+
+---
+
+# 📚 Bibliotecas Utilizadas
+
+```txt
+PyPDF2
+python-docx
+google-genai
+Flask
+python-dotenv
+sqlite3
+```
+
+---
+
+# 🚀 Como Executar o Projeto
+
+# 📋 Pré-requisitos
+
+* Python 3.8+
+* Pip instalado
+
+---
+
+# 🔧 Instalação
+
+## 1️⃣ Clone o repositório
+
+```bash
+git clone https://github.com/ArthurCarvallho/CKATSV1.git
+cd CKATSV1
+```
+
+---
+
+## 2️⃣ Crie um ambiente virtual
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Linux/macOS
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## 3️⃣ Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🔐 Configuração do `.env`
+
+Crie um arquivo chamado `.env` na raiz do projeto:
+
+```env
+GEMINI_API_KEY=sua_chave_do_google_aqui
+SECRET_KEY=uma_chave_secreta_inventada_por_voce
+```
+
+⚠️ Nunca coloque aspas nas chaves.
+
+---
+
+# ▶️ Execução
+
+Inicie o servidor Flask:
+
+```bash
+python app.py
+```
+
+---
+
+# 🌐 Estrutura do Projeto
+
+```txt
+CKATSV1/
+│
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── img/
+│
+├── templates/
+│
+├── uploads/
+│
+├── app.py
+├── requirements.txt
+├── .env
+└── README.md
+```
+
+---
+
+# 🚀 Roadmap — CK ATS V2
+
+A próxima versão do projeto está focada em:
+
+## 🏢 Fase 1 — Arquitetura SaaS Multi-Tenant
+
+Implementação de:
+
+* Isolamento por `ID_EMPRESA`
+* Estrutura B2B
+* Controle de assinaturas
+* Segurança entre empresas
+
+Objetivo:
+Garantir que os dados da Empresa A sejam totalmente isolados da Empresa B.
+
+---
+
+## 🗄️ Fase 2 — Migração para MySQL
+
+Substituição do SQLite por:
+
+✅ MySQL em produção
+
+Além disso:
+
+* Reestruturação do backend
+* Criação do `DatabaseManager`
+* SQL manual puro
+* Melhor performance
+* Maior escalabilidade
+
+---
+
+## 🖥️ Fase 3 — Infraestrutura & DevOps
+
+Deploy profissional utilizando:
+
+* Ubuntu Server
+* VirtualBox
+* SSH
+* Ambiente Linux
+* Configuração de rede
+* Deploy raiz
+
+---
+
+# 🎯 Objetivos do Projeto
+
+* Demonstrar domínio Full Stack
+* Aplicar IA em problemas reais
+* Criar solução SaaS escalável
+* Construir portfólio profissional
+* Explorar arquitetura multi-tenant
+
+---
+
+# 📌 Status Atual
+
+| Módulo         | Status                |
+| -------------- | --------------------- |
+| ATS Core       | ✅ Concluído           |
+| Ranking IA     | ✅ Concluído           |
+| Dashboard      | ✅ Concluído           |
+| Exportação CSV | ✅ Concluído           |
+| Multi-Tenant   | 🚧 Em desenvolvimento |
+| MySQL          | 🚧 Em desenvolvimento |
+| Deploy Linux   | 🚧 Em desenvolvimento |
+
+---
+
+# 👨‍💻 Autor
+
+## Arthur Paulo de Carvalho
+
+Projeto desenvolvido com foco em:
+
+* Engenharia de Software
+* Inteligência Artificial
+* Arquitetura Backend
+* SaaS B2B
+* Automação de RH
+
+---
+
+# ⭐ Considerações Finais
+
+O **CK ATS** representa a união entre:
+
+* IA aplicada
+* Automação inteligente
+* Arquitetura escalável
+* Experiência de usuário moderna
+
+O projeto evolui continuamente rumo a uma plataforma SaaS robusta e pronta para ambientes reais de recrutamento corporativo.
+
+---
+
+## 📄 Licença
+
+Este projeto possui finalidade educacional e de portfólio.
