@@ -130,7 +130,7 @@ O sistema apresenta métricas estratégicas como:
 
 ---
 
-# ⚙️ Ações de RH
+#  Ações de RH
 
 O recrutador pode:
 
