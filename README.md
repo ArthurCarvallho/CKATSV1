@@ -7,7 +7,8 @@
 **Autor:** Arthur Paulo de Carvalho
 **Versão:** SaaS Portfólio V1
 **Status:**  Protótipo Funcional Concluído
-OBS:
+<br>
+OBS: <br>
 A Versão 1 (CK ATS V1) foi finalizada em 2025. Recentemente, este código passou por uma refatoração com forte auxílio de Inteligência Artificial com o intuito de corrigir pequenos bugs, melhorar a legibilidade e organizar a documentação. O objetivo principal desta V1 foi validar a ideia e o fluxo do sistema.
 
 Atualmente, estou desenvolvendo a Versão 2 do zero. Nesta nova arquitetura, o uso de IA foi drasticamente reduzido. A inteligência artificial atua estritamente como um assistente para consultas pontuais de sintaxe e documentação. Toda a lógica de Backend (Python/Flask), modelagem de dados e engenharia da infraestrutura estão sendo construídas manualmente. O foco desta transição é forçar o raciocínio lógico e garantir autonomia técnica absoluta sobre a base de código.
