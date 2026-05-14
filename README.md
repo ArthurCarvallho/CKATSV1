@@ -1,4 +1,4 @@
-# 🚀 CK ATS — Triagem Inteligente de Currículos com IA
+#  CK ATS — Triagem Inteligente de Currículos com IA
 
 <div align="center">
 
@@ -6,7 +6,7 @@
 
 **Autor:** Arthur Paulo de Carvalho
 **Versão:** SaaS Portfólio V1
-**Status:** ✅ Protótipo Funcional Concluído
+**Status:**  Protótipo Funcional Concluído
 
 <br>
 
@@ -16,7 +16,7 @@
 
 ---
 
-# 📌 Sobre o Projeto
+#  Sobre o Projeto
 
 O **CK ATS** é uma plataforma de recrutamento inteligente (**ATS — Applicant Tracking System**) desenvolvida para automatizar e otimizar processos de triagem de currículos utilizando Inteligência Artificial.
 
@@ -29,19 +29,19 @@ O projeto nasceu para solucionar um dos maiores desafios do setor de RH:
 
 A solução utiliza um **LLM (Large Language Model)** através da API do **Google Gemini** para:
 
-✅ Extrair informações automaticamente dos currículos
-✅ Estruturar dados dos candidatos
-✅ Calcular um índice de adequação para cada vaga
-✅ Ranquear os candidatos mais compatíveis
-✅ Facilitar decisões estratégicas do RH
+ Extrair informações automaticamente dos currículos
+ Estruturar dados dos candidatos
+ Calcular um índice de adequação para cada vaga
+ Ranquear os candidatos mais compatíveis
+ Facilitar decisões estratégicas do RH
 
 O objetivo do sistema **não é substituir recrutadores**, mas sim transformar horas de triagem operacional em minutos de análise inteligente focada nos melhores talentos.
 
 ---
 
-# ✨ Funcionalidades Principais
+#  Funcionalidades Principais
 
-## 📂 Gestão de Vagas
+##  Gestão de Vagas
 
 * Criação de vagas
 * Listagem de vagas
@@ -49,7 +49,7 @@ O objetivo do sistema **não é substituir recrutadores**, mas sim transformar h
 * Cadastro manual de habilidades
 * Sugestão automática de habilidades com IA
 
-### 🤖 Sugestão Inteligente de Skills
+###  Sugestão Inteligente de Skills
 
 O sistema analisa a descrição da vaga e sugere automaticamente:
 
@@ -69,7 +69,7 @@ Envio simultâneo de múltiplos currículos nos formatos:
 * `.pdf`
 * `.docx`
 
-### 🧠 Extração de Dados com IA
+###  Extração de Dados com IA
 
 A IA realiza parsing automático e estruturado de:
 
@@ -81,15 +81,15 @@ A IA realiza parsing automático e estruturado de:
 * Idiomas
 * Certificações
 
-### 🔒 Prevenção de Duplicatas
+###  Prevenção de Duplicatas
 
 O sistema utiliza hash do arquivo para impedir processamento duplicado de currículos.
 
 ---
 
-# 🏆 Ranking Inteligente de Candidatos
+#  Ranking Inteligente de Candidatos
 
-## 📊 Índice de Adequação
+##  Índice de Adequação
 
 O CK ATS calcula automaticamente uma pontuação baseada em:
 
@@ -100,7 +100,7 @@ O CK ATS calcula automaticamente uma pontuação baseada em:
 
 ---
 
-## 🎯 Níveis de Compatibilidade
+##  Níveis de Compatibilidade
 
 Os candidatos são classificados visualmente em:
 
@@ -112,13 +112,13 @@ Os candidatos são classificados visualmente em:
 
 ---
 
-## 🥇 Visualização em Pódio
+##  Visualização em Pódio
 
 O sistema destaca os **Top 3 candidatos** utilizando uma interface inspirada em pódios de corrida, permitindo identificação imediata dos melhores talentos.
 
 ---
 
-# 📈 Dashboard & Analytics
+#  Dashboard & Analytics
 
 O sistema apresenta métricas estratégicas como:
 
@@ -134,26 +134,26 @@ O sistema apresenta métricas estratégicas como:
 
 O recrutador pode:
 
-✅ Aprovar candidatos
-✅ Reprovar candidatos
-✅ Excluir candidatos
-✅ Agendar entrevistas
-✅ Exportar dados para CSV
+ Aprovar candidatos
+ Reprovar candidatos
+ Excluir candidatos
+ Agendar entrevistas
+ Exportar dados para CSV
 
 ---
 
-# 🏗️ Arquitetura e Tecnologias
+#  Arquitetura e Tecnologias
 
-## 🔙 Backend
+##  Backend
 
 * Python 3
 * Flask
 
-## 🤖 Inteligência Artificial
+##  Inteligência Artificial
 
 * Google Gemini API (`google-genai`)
 
-## 🗄️ Banco de Dados
+##  Banco de Dados
 
 * SQLite 3 *(V1)*
 * MySQL *(em implementação na V2)*
@@ -165,7 +165,7 @@ O recrutador pode:
 
 ---
 
-## 🎨 Frontend
+##  Frontend
 
 * HTML5
 * CSS3
@@ -173,7 +173,7 @@ O recrutador pode:
 
 ---
 
-## 🔐 Segurança
+##  Segurança
 
 * `python-dotenv`
 * Variáveis de ambiente
@@ -181,7 +181,7 @@ O recrutador pode:
 
 ---
 
-# 📚 Bibliotecas Utilizadas
+# Bibliotecas Utilizadas
 
 ```txt
 PyPDF2
@@ -203,9 +203,9 @@ sqlite3
 
 ---
 
-# 🔧 Instalação
+#  Instalação
 
-## 1️⃣ Clone o repositório
+##  Clone o repositório
 
 ```bash
 git clone https://github.com/ArthurCarvallho/CKATSV1.git
@@ -214,7 +214,7 @@ cd CKATSV1
 
 ---
 
-## 2️⃣ Crie um ambiente virtual
+##  Crie um ambiente virtual
 
 ### Windows
 
@@ -232,7 +232,7 @@ source venv/bin/activate
 
 ---
 
-## 3️⃣ Instale as dependências
+##  Instale as dependências
 
 ```bash
 pip install -r requirements.txt
@@ -240,7 +240,7 @@ pip install -r requirements.txt
 
 ---
 
-# 🔐 Configuração do `.env`
+#  Configuração do `.env`
 
 Crie um arquivo chamado `.env` na raiz do projeto:
 
@@ -249,11 +249,11 @@ GEMINI_API_KEY=sua_chave_do_google_aqui
 SECRET_KEY=uma_chave_secreta_inventada_por_voce
 ```
 
-⚠️ Nunca coloque aspas nas chaves.
+ Nunca coloque aspas nas chaves.
 
 ---
 
-# ▶️ Execução
+#  Execução
 
 Inicie o servidor Flask:
 
@@ -263,7 +263,7 @@ python app.py
 
 ---
 
-# 🌐 Estrutura do Projeto
+#  Estrutura do Projeto
 
 ```txt
 CKATSV1/
@@ -285,11 +285,11 @@ CKATSV1/
 
 ---
 
-# 🚀 Roadmap — CK ATS V2
+# Roadmap — CK ATS V2
 
 A próxima versão do projeto está focada em:
 
-## 🏢 Fase 1 — Arquitetura SaaS Multi-Tenant
+##  Fase 1 — Arquitetura SaaS Multi-Tenant
 
 Implementação de:
 
@@ -303,11 +303,11 @@ Garantir que os dados da Empresa A sejam totalmente isolados da Empresa B.
 
 ---
 
-## 🗄️ Fase 2 — Migração para MySQL
+##  Fase 2 — Migração para MySQL
 
 Substituição do SQLite por:
 
-✅ MySQL em produção
+ MySQL em produção
 
 Além disso:
 
@@ -319,7 +319,7 @@ Além disso:
 
 ---
 
-## 🖥️ Fase 3 — Infraestrutura & DevOps
+##  Fase 3 — Infraestrutura & DevOps
 
 Deploy profissional utilizando:
 
@@ -332,7 +332,7 @@ Deploy profissional utilizando:
 
 ---
 
-# 🎯 Objetivos do Projeto
+#  Objetivos do Projeto
 
 * Demonstrar domínio Full Stack
 * Aplicar IA em problemas reais
@@ -342,17 +342,17 @@ Deploy profissional utilizando:
 
 ---
 
-# 📌 Status Atual
+#  Status Atual
 
 | Módulo         | Status                |
 | -------------- | --------------------- |
-| ATS Core       | ✅ Concluído           |
-| Ranking IA     | ✅ Concluído           |
-| Dashboard      | ✅ Concluído           |
-| Exportação CSV | ✅ Concluído           |
-| Multi-Tenant   | 🚧 Em desenvolvimento |
-| MySQL          | 🚧 Em desenvolvimento |
-| Deploy Linux   | 🚧 Em desenvolvimento |
+| ATS Core       |  Concluído           |
+| Ranking IA     |  Concluído           |
+| Dashboard      |  Concluído           |
+| Exportação CSV |  Concluído           |
+| Multi-Tenant   |  Em desenvolvimento |
+| MySQL          |  Em desenvolvimento |
+| Deploy Linux   |  Em desenvolvimento |
 
 ---
 
@@ -370,7 +370,7 @@ Projeto desenvolvido com foco em:
 
 ---
 
-# ⭐ Considerações Finais
+#  Considerações Finais
 
 O **CK ATS** representa a união entre:
 
@@ -384,7 +384,7 @@ O projeto evolui continuamente rumo a uma plataforma SaaS robusta e pronta para 
 ---
 
 
-## 📄 Licença e Direitos Autorais
+##  Licença e Direitos Autorais
 
 **© 2026 Arthur Paulo de Carvalho. Todos os direitos reservados.**
 
