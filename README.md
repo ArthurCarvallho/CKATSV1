@@ -60,9 +60,9 @@ O sistema analisa a descrição da vaga e sugere automaticamente:
 
 ---
 
-## 👨‍💼 Processamento Inteligente de Currículos
+##  Processamento Inteligente de Currículos
 
-### 📤 Upload em Massa
+###  Upload em Massa
 
 Envio simultâneo de múltiplos currículos nos formatos:
 
