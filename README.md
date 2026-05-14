@@ -356,7 +356,7 @@ Deploy profissional utilizando:
 
 ---
 
-# 👨‍💻 Autor
+#  Autor
 
 ## Arthur Paulo de Carvalho
 
