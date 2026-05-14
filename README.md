@@ -194,9 +194,9 @@ sqlite3
 
 ---
 
-# 🚀 Como Executar o Projeto
+#  Como Executar o Projeto
 
-# 📋 Pré-requisitos
+#  Pré-requisitos
 
 * Python 3.8+
 * Pip instalado
