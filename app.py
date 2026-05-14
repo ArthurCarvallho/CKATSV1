@@ -1,7 +1,3 @@
-# ==============================================================================
-# CK ATS V1 - APP.PY - VERSÃO FINAL BLINDADA COM NOVO SDK (GOOGLE.GENAI)
-# ==============================================================================
-
 # --- Imports Essenciais ---
 import os
 import json
@@ -20,8 +16,7 @@ from dotenv import load_dotenv
 # Importações de extração de texto
 import PyPDF2
 import docx
-
-# NOVO SDK OFICIAL DO GEMINI (google-genai)
+# Imports para uso da API do gemini
 from google import genai
 from google.genai import types
 
@@ -50,9 +45,7 @@ else:
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
-# ==============================================================================
-# FUNÇÕES CORE: IA E EXTRAÇÃO
-# ==============================================================================
+# Funçoes
 
 def extrair_texto(caminho):
     """Extrai texto de arquivos PDF ou DOCX."""
@@ -112,9 +105,7 @@ def analisar_com_gemini(dados_candidato: dict) -> str:
     """Gera uma análise textual resumida do candidato."""
     return "Análise estrutural processada e arquivada pelo motor algorítmico do CK ATS."
 
-# ==============================================================================
-# GESTÃO DE BANCO DE DADOS (SQLite)
-# ==============================================================================
+# Banco de dados
 DATABASE, VAGAS_DB = 'candidatos.db', 'vagas.db'
 def get_db(db_name=DATABASE):
     conn = sqlite3.connect(db_name); conn.row_factory = sqlite3.Row; return conn
@@ -155,9 +146,7 @@ with app.app_context():
     init_db()
     init_vagas_db()
 
-# ==============================================================================
-# ROTAS FRONTEND (PÁGINAS)
-# ==============================================================================
+# Rotas
 
 @app.route('/')
 def index(): 
@@ -175,9 +164,7 @@ def upload_curriculos_page(): return render_template('upload.html')
 @app.route('/processing')
 def processing_page(): return render_template('processing.html')
 
-# ==============================================================================
-# MOTOR DE TRIAGEM E MATCH (CORE ATS)
-# ==============================================================================
+# Motor de triaem e ranqueamento
 
 @app.route('/candidatos_ranqueados')
 def candidatos_ranqueados():
@@ -278,10 +265,7 @@ def detalhes_candidato(candidate_id):
 
     return render_template('candidate_details.html', candidate=candidato_dict)
 
-# ==============================================================================
-# MOTOR DE UPLOAD (Ingestão de Currículos)
-# ==============================================================================
-
+# Upload e processamento de arquivos
 @app.route('/upload_multiple_files', methods=['POST'])
 def upload_multiple_files():
     if 'arquivos[]' not in request.files:
@@ -349,10 +333,7 @@ def upload_multiple_files():
     flash('Processamento em lote concluído.', 'success')
     return redirect(url_for('candidatos_ranqueados'))
 
-# ==============================================================================
-# APIS GERAIS (Login, Dashboard, Vagas, CSV)
-# ==============================================================================
-
+# Rotas de API para Dashboard e Gestão
 @app.route('/dashboard_data')
 def dashboard_data():
     try:
@@ -479,8 +460,6 @@ def api_agendar_entrevista():
     logger.info(f"ENTREVISTA AGENDADA: {data.get('candidato_nome')} com {data.get('recrutador')} em {data.get('data')} {data.get('hora')}")
     return jsonify({'success': True})
 
-# ==============================================================================
-# INICIALIZAÇÃO
-# ==============================================================================
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

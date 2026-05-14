@@ -1,14 +1,7 @@
-// ==============================================================================
-// CK ATS V1 - SCRIPT.JS - VERSÃO MODULARIZADA E LIMPA
-// Design Responsivo e Padrão Sênior
-// ==============================================================================
-
 document.addEventListener('DOMContentLoaded', () => {
     console.log("CK ATS V1 script.js carregado e em execução.");
 
-    // ==========================================================================
-    // 1. LÓGICA UNIVERSAL (Executa em todas as páginas)
-    // ==========================================================================
+   
     const userNomeSpan = document.getElementById('user-nome');
     if (userNomeSpan) {
         const nomeUsuario = localStorage.getItem('user_nome');
@@ -17,9 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ==========================================================================
-    // 2. LÓGICA DA PÁGINA DE VAGAS (vagas.html)
-    // ==========================================================================
+    
     const jobListContainer = document.getElementById('jobList');
     if (jobListContainer) {
         const modal = document.getElementById('modalNovaVaga');
@@ -183,9 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderVagas();
     }
 
-    // ==========================================================================
-    // 3. LÓGICA DA PÁGINA DE LOGIN (login.html)
-    // ==========================================================================
+   
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', async (event) => {
@@ -219,9 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================================================
-    // 4. LÓGICA DA DASHBOARD (dashboard.html)
-    // ==========================================================================
+ 
     const dashboardContainer = document.querySelector('.dashboard-grid');
     if (dashboardContainer) {
         async function fetchDashboardData() {
@@ -281,9 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchDashboardData();
     }
 
-    // ==========================================================================
-    // 5. LÓGICA DA PÁGINA DE UPLOAD (upload.html)
-    // ==========================================================================
+   
     const uploadForm = document.getElementById('uploadForm');
     if (uploadForm) {
         const btnIniciar = document.getElementById('btnIniciarTriagemUpload');
@@ -330,9 +315,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ==========================================================================
-    // 6. LÓGICA DA PÁGINA DE DETALHES DO CANDIDATO (candidate_details.html)
-    // ==========================================================================
     const tabsContainer = document.querySelector('.tabs-navigation');
     if (tabsContainer) {
         const tabButtons = tabsContainer.querySelectorAll('.tab-btn');
@@ -357,9 +339,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if(tabButtons.length > 0) tabButtons[0].click();
     }
 
-    // ==========================================================================
-    // 7. LÓGICA DA PÁGINA DE CANDIDATOS (candidatos_ranqueados.html)
-    // ==========================================================================
     const candidateListContainer = document.getElementById('candidateList');
     if (candidateListContainer) {
         const vagaSelector = document.getElementById('vagaSelector');
@@ -484,9 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCandidates(window.FLASK_CANDIDATES_DATA || []);
     }
 
-    // ==========================================================================
-    // 8. LÓGICA DA PÁGINA DE AGENDAMENTO (agendar_entrevista.html)
-    // ==========================================================================
+  
     const interviewForm = document.getElementById('interviewForm');
     if (interviewForm) {
         interviewForm.addEventListener('submit', async (e) => {
